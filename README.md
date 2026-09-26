@@ -26,7 +26,7 @@ LIME identifies words in the judgment that influenced prediction.
     python src/lime_explanation.py
 
 ## Author
-[Your Name]
+Simran Gupta
 
 ## License
 For academic and research purposes only.
