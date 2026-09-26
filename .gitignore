@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.bin
+*.h5
+*.safetensors
+*.pt
+model_90_accuracy/
+checkpoint*/
+models/
+*.log
+.DS_Store

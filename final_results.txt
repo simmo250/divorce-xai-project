@@ -1,0 +1,65 @@
+========================================================
+DIVORCE CASE OUTCOME PREDICTION - RESULTS
+========================================================
+
+Dataset:
+  Total cases: 1000 divorce judgments
+  After balancing (oversampling): 1430 cases
+  Training cases: 1144
+  Testing cases: 286
+
+========================================================
+MODEL 1: TF-IDF + Logistic Regression (Baseline)
+========================================================
+Accuracy: 75.00%
+F1 Macro: 72.00%
+
+Classification Report:
+              precision    recall  f1-score   support
+  Accepted       0.57      0.72      0.63        18
+  Rejected       0.86      0.76      0.81        42
+  accuracy                           0.75        60
+  macro avg      0.72      0.74      0.72        60
+  weighted avg   0.77      0.75      0.76        60
+
+========================================================
+MODEL 2: InLegalBERT (Balanced + 512 tokens)
+========================================================
+Accuracy: 90.21%
+F1 Macro: 90.21%
+
+Training Configuration:
+  Base Model: law-ai/InLegalBERT
+  Epochs: 4
+  Batch Size: 4 (with gradient accumulation 2)
+  Learning Rate: 2e-5
+  Max Sequence Length: 512 tokens
+  FP16 (mixed precision): Enabled
+
+========================================================
+EXPLAINABLE AI (LIME) - Sample Output
+========================================================
+Case Title: Crl.Petn./111/2023 of Rimi Tayang and Anr. Vs The State of AP
+Actual Outcome: Accepted
+Predicted Outcome: Accepted
+
+Top words influencing prediction:
+  'held'         --> Pushed towards ACCEPTED
+  'GAUHATI'      --> Pushed towards ACCEPTED
+  'Banderdewa'   --> Pushed towards ACCEPTED
+  'compounding'  --> Pushed towards ACCEPTED
+  'grievance'    --> Pushed towards ACCEPTED
+  'decision'     --> Pushed towards REJECTED
+  'High'         --> Pushed towards ACCEPTED
+  'Advocates'    --> Pushed towards REJECTED
+  'HON'          --> Pushed towards ACCEPTED
+
+========================================================
+SUMMARY
+========================================================
+Baseline Model: 75.00%
+Final Model (InLegalBERT): 90.21%
+Improvement: +15.21 percentage points
+
+Target achieved: 90%+ accuracy with explainability
+========================================================

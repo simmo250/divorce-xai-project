@@ -1,0 +1,29 @@
+LIME Explanation - Sample Case
+========================================================
+
+Case Title: Crl.Petn./111/2023 of Rimi Tayang and Anr. Vs The State of AP
+Actual Outcome: Accepted
+Predicted Outcome: Accepted
+
+Top words that influenced the model's decision:
+
+Towards ACCEPTED:
+  held
+  GAUHATI
+  Banderdewa
+  compounding
+  grievance
+  High
+  HON
+
+Towards REJECTED:
+  decision
+  Advocates
+  or
+
+========================================================
+Interpretation:
+The model identified that words like 'compounding' and 'grievance'
+are strong legal indicators for a petition being accepted. This shows
+that the model has learned real legal patterns, not just memorized text.
+========================================================

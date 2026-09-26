@@ -1,0 +1,13 @@
+{
+  "baseline_accuracy": 0.75,
+  "baseline_f1_macro": 0.72,
+  "inlegalbert_accuracy": 0.9021,
+  "inlegalbert_f1_macro": 0.9021,
+  "dataset_size": 1000,
+  "balanced_size": 1430,
+  "train_size": 1144,
+  "test_size": 286,
+  "model": "law-ai/InLegalBERT",
+  "max_length": 512,
+  "epochs": 4
+}
